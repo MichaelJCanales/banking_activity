@@ -1,7 +1,7 @@
 
 import statistics as stats
 
-from code.StockData import StockData
+from StockData import StockData
 
 
 class StockMetrics(StockData):

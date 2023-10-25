@@ -1,0 +1,28 @@
+import sys
+import os
+
+file_path = os.path.join("data", "raw", "amzn.csv")
+metrics = StockMetrics(file_path)
+
+
+name: Run Validation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9 
+
+      - name: Run validate.py
+        run: python -m code.test.validate pt3
