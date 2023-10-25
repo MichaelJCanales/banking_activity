@@ -5,7 +5,7 @@ from datetime import datetime
 
 
 class StockData:
-    def __init__(self, path,):
+    def __init__(self, path):
         self.path = path
         self.data = None
 
