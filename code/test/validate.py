@@ -21,9 +21,7 @@ The terminal output will tell you if your pipeline is successful.
 import sys
 import os
 
-from StockMetrics import StockMetrics
-
-
+from code.StockMetrics import StockMetrics
 
 OKGREEN = '\033[92m'
 FAIL = '\033[91m'
@@ -32,8 +30,9 @@ BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
 
 # Create a Metrics object
-file_path = os.path.join("data", "raw", "amzn.csv")
-metrics = StockMetrics("data/raw/amzn.csv")
+file_path = os.path.join("data","raw","amzn.csv")
+metrics = StockMetrics(file_path)
+
 
 def pt1():
     # try to compute average
