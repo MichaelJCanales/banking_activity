@@ -1,7 +1,6 @@
-
 import statistics as stats
-
 from StockData import StockData
+
 
 
 class StockMetrics(StockData):
@@ -14,20 +13,14 @@ class StockMetrics(StockData):
         self.load()
 
     def average01(self):
-        """pt1
-        """
         averages = []
         for row in self.data:
-            ...
-
-        return averages
+            return averages
+        ...
 
     def median02(self):
-        """pt2
-        """
         ...
 
     def stddev03(self):
-        """pt3
-        """
+
         ...
