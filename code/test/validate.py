@@ -23,6 +23,7 @@ import os
 
 from code.StockMetrics import StockMetrics
 
+
 OKGREEN = '\033[92m'
 FAIL = '\033[91m'
 ENDC = '\033[0m'
@@ -31,7 +32,7 @@ UNDERLINE = '\033[4m'
 
 # Create a Metrics object
 file_path = os.path.join("data","raw","amzn.csv")
-metrics = StockMetrics(file_path)
+metrics = StockMetrics("bank-activity-lab/data/raw/amzn.csv")
 
 
 def pt1():

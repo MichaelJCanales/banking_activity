@@ -3,6 +3,7 @@ from StockData import StockData
 
 
 
+
 class StockMetrics(StockData):
     def __init__(self, path):
         # call the parent method's constructor
@@ -17,7 +18,7 @@ class StockMetrics(StockData):
         for row in self.data:
             return averages
         ...
-
+        
     def median02(self):
         ...
 
