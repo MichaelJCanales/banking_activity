@@ -15,9 +15,13 @@ class StockMetrics(StockData):
 
     def average01(self):
         averages = []
-        for row in self.data:
-            return averages
-        ...
+        for row in self.data: 
+            valid_prices = [] 
+            
+            for stock_price in row:
+                ...
+        
+        return averages
         
     def median02(self):
         ...
