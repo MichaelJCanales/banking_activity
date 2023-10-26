@@ -34,8 +34,6 @@ ENDC = '\033[0m'
 BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
 
-# Create a Metrics object
-metrics = StockMetrics("data/raw/amzn.csv")
 
 def pt1():
     # try to compute average
