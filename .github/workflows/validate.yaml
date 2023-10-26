@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9 
+          python-version: 3.9.18
 
       - name: Run validate.py
         run: python -m code.test.validate pt3
