@@ -30,7 +30,7 @@ BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
 
 
-metrics = StockMetrics("data/raw/amzn.csv")
+metrics = StockMetrics(file_path)
 
 def pt1():
     # try to compute average
