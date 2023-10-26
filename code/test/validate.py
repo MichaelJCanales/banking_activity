@@ -32,7 +32,7 @@ UNDERLINE = '\033[4m'
 
 # Create a Metrics object
 file_path = os.path.join("data","raw","amzn.csv")
-metrics = StockMetrics(file_path)
+metrics = StockMetrics(r"data/raw/amzn.csv")
 
 
 def pt1():
