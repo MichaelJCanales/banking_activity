@@ -26,8 +26,6 @@ file_path = os.path.join("data", "raw", "amzn.csv")
 metrics = StockMetrics(file_path)
 
 
-
-
 OKGREEN = '\033[92m'
 FAIL = '\033[91m'
 ENDC = '\033[0m'
