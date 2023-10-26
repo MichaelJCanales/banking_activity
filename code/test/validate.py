@@ -22,9 +22,6 @@ import sys
 import os
 from code.StockMetrics import StockMetrics
 
-file_path = os.path.join("data", "raw", "amzn.csv")
-metrics = StockMetrics(file_path)
-
 
 OKGREEN = '\033[92m'
 FAIL = '\033[91m'
@@ -32,6 +29,8 @@ ENDC = '\033[0m'
 BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
 
+file_path = os.path.join("data", "raw", "amzn.csv")
+metrics = StockMetrics("C:\Users\Michael\bank-activity\data\raw\amzn.csv")
 
 def pt1():
     # try to compute average
