@@ -24,7 +24,7 @@ import os
 from code.StockMetrics import StockMetrics
 
 file_path = os.path.join("data", "raw", "amzn.csv")
-metrics = StockMetrics(r"data\raw\amzn.csv")
+metrics = StockMetrics("data/raw/amzn.csv")
 
 
 
