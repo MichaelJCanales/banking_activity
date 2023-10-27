@@ -2,8 +2,6 @@ import statistics as stats
 from StockData import StockData
 
 
-
-
 class StockMetrics(StockData):
     def __init__(self, path):
         # call the parent method's constructor

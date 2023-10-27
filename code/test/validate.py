@@ -20,7 +20,7 @@ The terminal output will tell you if your pipeline is successful.
 """
 import sys
 import os
-from StockMetrics import StockMetrics
+from code.StockMetrics import StockMetrics
 
 
 
@@ -31,7 +31,7 @@ BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
 
 file_path = os.path.join("data", "raw", "amzn.csv")
-metrics = StockMetrics("C:\\Users\\Michael\\bank-activity\\data\\raw\\amzn.csv")
+metrics = StockMetrics("data\raw\amzn.csv")
 
 def pt1():
     # try to compute average
