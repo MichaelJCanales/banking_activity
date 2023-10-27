@@ -12,6 +12,8 @@ class StockMetrics(StockData):
         self.load()
 
     def average01(self):
+        """pt1
+        """
         averages = []
         for row in self.data: 
             valid_prices = [] 
@@ -22,8 +24,11 @@ class StockMetrics(StockData):
         return averages
         
     def median02(self):
+        """pt2
+        """
         ...
 
     def stddev03(self):
-
+        """pt3
+        """
         ...
