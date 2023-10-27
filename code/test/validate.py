@@ -22,7 +22,7 @@ import sys
 import os
 from code.StockMetrics import StockMetrics
 
-file_path = os.path.join("." "data", "raw", "amzn.csv")
+file_path = os.path.join(".", "data", "raw", "amzn.csv")
 
 OKGREEN = '\033[92m'
 FAIL = '\033[91m'
