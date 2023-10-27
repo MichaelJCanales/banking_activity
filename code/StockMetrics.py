@@ -19,13 +19,34 @@ class StockMetrics(StockData):
             valid_prices = [] 
             
             for stock_price in row:
-                ...
-        
+                # skip any values that are empty strings then convert
+                if stock_price != "":
+                    # convert the strings to numbers
+                    price = float(stock_price) 
+            
+            # get the average and round it to nearest 3rd decimal
+            if valid_prices:
+                average = stats.mean(valid_prices)
+                rounded_average = round(average, 3)
+                
+            # append round_average to averages
+            averages.append(rounded_average)
+            
         return averages
         
     def median02(self):
         """pt2
         """
+        median = []
+        
+        for row in self.data:
+            valid_prices =[]
+            for stock_price in row:
+                if stock_price != "":
+                    price = float(stock_price)
+            
+                
+                    
         ...
 
     def stddev03(self):
