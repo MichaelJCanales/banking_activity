@@ -18,24 +18,25 @@ class StockMetrics(StockData):
         averages = []
         # skip the dates
         for row in self.data: 
-            valid_prices = [] 
+            
+            valid_prices = []
             
             for stock_price in row[1:]:
                 # skip any empty strings then convert
                 if stock_price != "":
                     try:
-                    # convert the strings to numbers and .append into the average
+                        # convert str to numbers and .append into the average
                         price = float(stock_price)
-                        valid_prices.append(price) 
+                        valid_prices.append(price)
                     except ValueError:
-                        continue
-            
-            # get the average and round it to nearest 3rd decimal
+                        continue           
+                        
+            # get the average and round it to nearest 3rd decimal 
             if valid_prices:
                 average = stats.mean(valid_prices)
                 rounded_average = round(average, 3)
                 
-                # append round_average to averages
+                # append rounded_average to averages
                 averages.append(rounded_average)
             
         return averages
@@ -64,4 +65,24 @@ class StockMetrics(StockData):
     def stddev03(self):
         """pt3
         """
+        # now get the standard deviation, stdev
+        # same as averages 
+        st_dev = [] 
         
+        for row in self.data:
+            valid_prices = []
+            
+            for stock_price in row[1:]:
+                if stock_price != "":
+                    try:
+                        price = float(stock_price)
+                        valid_prices.append(price)
+                    except ValueError:
+                        continue
+                    
+            if valid_prices:
+                standeviation = stats.stdev(valid_prices)
+                rounded_deviation = round(standeviation, 3)
+                st_dev.append(rounded_deviation)
+                
+        return st_dev
