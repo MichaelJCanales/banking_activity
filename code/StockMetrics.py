@@ -1,15 +1,27 @@
 import statistics as stats
 from code.StockData import StockData
+import csv
 
 
 class StockMetrics(StockData):
-    def __init__(self, path):
+    def __init__(self, path, filename):
         # call the parent method's constructor
         super(StockMetrics, self).__init__(path)
 
         # now that we've ran self.load(), we can interact with "self.data" as a
         # list of lists
         self.load()
+        self.filename = filename
+        self.data = []
+        
+    def read_csv(self):
+        with open(self.filename, 'r') as file: 
+            reader = csv.reader(file)
+            
+            next(reader)
+            
+            for row in reader:
+                self.data.append(row)
 
     def average01(self):
         """pt1
@@ -54,8 +66,6 @@ class StockMetrics(StockData):
                 medians.append(median_row)
             
         return medians
-                    
-        ...
 
     def stddev03(self):
         """pt3
