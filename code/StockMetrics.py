@@ -16,12 +16,11 @@ class StockMetrics(StockData):
         """pt1
         """
         averages = []
-        # skip the dates
+        
         for row in self.data: 
-            
             valid_prices = []
             
-            for stock_price in row[1:]:
+        for stock_price in row[1:]:
                 # skip any empty strings then convert
                 if stock_price != "":
                     try:
@@ -32,12 +31,12 @@ class StockMetrics(StockData):
                         continue           
                         
             # get the average and round it to nearest 3rd decimal 
-            if valid_prices:
-                average = stats.mean(valid_prices)
-                rounded_average = round(average, 3)
+        if valid_prices:
+            average = stats.mean(valid_prices)                
+            rounded_average = round(average, 3)
                 
                 # append rounded_average to averages
-                averages.append(rounded_average)
+            averages.append(rounded_average)
             
         return averages
         
