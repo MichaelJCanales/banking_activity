@@ -67,7 +67,7 @@ class StockMetrics(StockData):
         """
         # now get the standard deviation, stdev
         # same as averages 
-        st_dev = [] 
+        stand_dev = [] 
         
         for row in self.data:
             valid_prices = []
@@ -83,6 +83,6 @@ class StockMetrics(StockData):
             if valid_prices:
                 standeviation = stats.stdev(valid_prices)
                 rounded_deviation = round(standeviation, 3)
-                st_dev.append(rounded_deviation)
+                stand_dev.append(rounded_deviation)
                 
-        return st_dev
+        return stand_dev
