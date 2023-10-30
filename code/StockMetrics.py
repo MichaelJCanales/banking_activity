@@ -17,26 +17,14 @@ class StockMetrics(StockData):
         """
         averages = []
         
-        for row in self.data: 
-            valid_prices = []
+        for row in self.data:
+            # convert to float first and skip empty strings
+            valid_prices = [float(price) for price in row[1:] if price != "" and price != " "]  
             
-        for stock_price in row[1:]:
-                # skip any empty strings then convert
-                if stock_price != "":
-                    try:
-                        # convert str to float and .append into the average
-                        price = float(stock_price)
-                        valid_prices.append(price)
-                    # Skips the non-numeric values 
-                    except ValueError: 
-                        continue           
-                        
             # get the average and round it to nearest 3rd decimal 
-        if valid_prices:
             average = stats.mean(valid_prices)                
-            rounded_average = round(average, 3)
-                
-                # append rounded_average to averages
+            rounded_average = round(average, 3)                
+            # append rounded_average to averages
             averages.append(rounded_average)
             
         return averages
@@ -48,17 +36,11 @@ class StockMetrics(StockData):
         medians = []
         
         for row in self.data:
-            valid_prices =[]
-            for stock_price in row:
-                if stock_price != "":
-                    try:
-                        price = float(stock_price)
-                        valid_prices.append(price)
-                    except ValueError:
-                        continue
-            if valid_prices:
-                median_row = stats.median(valid_prices)
-                medians.append(median_row)
+            valid_prices =[float(price) for price in row[1:] if price != "" and price != " "]
+
+            # get the median
+            median_row = stats.median(valid_prices)
+            medians.append(median_row)
             
         return medians
 
@@ -70,19 +52,10 @@ class StockMetrics(StockData):
         stand_dev = [] 
         
         for row in self.data:
-            valid_prices = []
-            
-            for stock_price in row[1:]:
-                if stock_price != "":
-                    try:
-                        price = float(stock_price)
-                        valid_prices.append(price)
-                    except ValueError:
-                        continue
-                    
-            if valid_prices:
-                standeviation = stats.stdev(valid_prices)
-                rounded_deviation = round(standeviation, 3)
-                stand_dev.append(rounded_deviation)
+            valid_prices = [float(price) for price in row[1:] if price != "" and price != " "]
+
+            standeviation = stats.stdev(valid_prices)
+            rounded_deviation = round(standeviation, 3)
+            stand_dev.append(rounded_deviation)
                 
         return stand_dev

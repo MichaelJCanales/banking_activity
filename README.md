@@ -20,4 +20,4 @@ We are to use object-oriented programming (OOP) for a dataset of Amazon stocks t
 * Directory Path
 * Validation on Github Actions
 * Skipping empty strings and non-numeric values
-* Unable to convert strings to float using list comprehension 
+* Convert strings to float using list comprehension 
