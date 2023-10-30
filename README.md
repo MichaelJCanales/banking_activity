@@ -3,7 +3,7 @@
 Begin reading `instructions.md` to get started.
 
 ## Project Intro/Objective
-The purpose of this project is to analyze stock data in Python. 
+The purpose of this project is to analyze stock data in Python. That will be then use to process a sentiment analysis to see how it can predict stock prices. 
 
 ### Methods Used
 * OOP
