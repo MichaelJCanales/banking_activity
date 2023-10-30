@@ -3,24 +3,21 @@
 Begin reading `instructions.md` to get started.
 
 ## Project Intro/Objective
-The purpose of this project is 
+The purpose of this project is to analyze stock data in Python. 
 
 ### Methods Used
-* Inferential Statistics
-* Machine Learning
-* Data Visualization
-* Predictive Modeling
-* etc.
+* OOP
 
 ### Technologies
-* R 
 * Python
-* D3
-* PostGres, MySql
-* Pandas, jupyter
-* HTML
-* JavaScript
-* etc. 
+* Csv
+
 
 ## Project Description
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
+We are to use object-oriented programming (OOP) for a dataset of Amazon stocks to eventually process a sentiment analysis and how it can predict stock price. We used the statistics module to be able to find the average, median and the standard deviation.
+
+### Challenges 
+* Directory Path
+* Validation on Github Actions
+* Skipping empty strings and non-numeric values
+* Unable to convert strings to float using list comprehension 

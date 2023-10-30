@@ -24,10 +24,11 @@ class StockMetrics(StockData):
                 # skip any empty strings then convert
                 if stock_price != "":
                     try:
-                        # convert str to numbers and .append into the average
+                        # convert str to float and .append into the average
                         price = float(stock_price)
                         valid_prices.append(price)
-                    except ValueError:
+                    # Skips the non-numeric values 
+                    except ValueError: 
                         continue           
                         
             # get the average and round it to nearest 3rd decimal 
@@ -43,7 +44,7 @@ class StockMetrics(StockData):
     def median02(self):
         """pt2
         """
-        # repurpose code from averages but don't round 
+        # repurpose code from averages, don't round 
         medians = []
         
         for row in self.data:
@@ -64,8 +65,8 @@ class StockMetrics(StockData):
     def stddev03(self):
         """pt3
         """
-        # now get the standard deviation, stdev
-        # same as averages 
+        # now get the standard deviation
+        # same as averages and round
         stand_dev = [] 
         
         for row in self.data:
